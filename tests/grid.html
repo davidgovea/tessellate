@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../lib/raphael-min.js"></script>
+		<script src="../tessellate.js"></script>
+		
+		<script>
+		// Delayed for page load
+		setTimeout(function(){
+			var paper = Raphael("paper",500,500);
+			paper.grid();
+		}, 1500);
+		</script>
+	</head>
+	<body>
+		<div id="paper"></div>
+	</body>
+</html>
