@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <title>Grid Test</title>
+	    <title>OctoGrid Test</title>
 		<script src="../lib/raphael-min.js"></script>
 		<script src="../tessellate.js"></script>
 		
 		<script>
 		// Delayed for page load
 		setTimeout(function(){
-			var paper = Raphael("paper",500,500);
-			paper.grid(10,10,8,8,45,'red',12);
-		}, 1500);
+            var paper = Raphael("paper",500,500);
+            paper.octogrid(10,10,8,8,45,'red');
+        }, 1500);
 		</script>
 	</head>
 	<body>
 		<div id="paper"></div>
-		Grid Test
+		OctoGrid Test
 	</body>
 </html>
