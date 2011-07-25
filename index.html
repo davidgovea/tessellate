@@ -8,8 +8,9 @@
 		<script>
 		// Delayed for page load
 		setTimeout(function(){
-			var paper = Raphael("paper",500,500);
+			var paper = Raphael("paper",500,1000);
 			paper.grid(10,10,8,8,45,'red',12);
+			paper.octogrid(10,500,8,8,45,'green');
 		}, 1500);
 		</script>
 	</head>
