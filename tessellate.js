@@ -1,3 +1,7 @@
+//
+// Tessellate.js - https://github.com/davidgovea/tessellate - MIT License
+//
+
 (function(Raphael){
     Raphael.fn.grid = function(startx, starty, rows, cols, width, fill, roundR){
         var cellList = [],
