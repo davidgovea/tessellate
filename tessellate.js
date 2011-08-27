@@ -49,13 +49,13 @@
     
     Raphael.fn.octogrid = function(startx,starty,rows,cols,width,fill){
         console.time('Create OctoGrid');
-        var cellList = [],
+        var cellList = {},
             x = startx,
             y = starty,
             side = width/(1+Math.SQRT2);
     
         for (var i=0; i<rows; i++){
-            cellList[i] = [];
+         //   cellList[i] = [];
             x = startx;
             for(var j=0; j<cols; j++){
                 var cell = this.octagon(x,y,width);
@@ -67,12 +67,14 @@
                // cell.click(cellClick);
                 //cell.mouseover(cellOver);
                 //cell.mouseout(cellOut);
-                cellList[i][j] = cell;
+                cellList[(i+1)+"_"+(j+1)+"_1"] = cell;
+                //cellList[i][j] = cell;
     
                 if(i>0 && j > 0){
                     var d = this.rect((x-side/2),(y-side/2),side,side);
                     d.rotate(45);
-                    d.attr('fill','#ccc');
+                    d.attr('fill','#3f3f3f');
+                    cellList[i+"_"+j+"_2"] = d;
                   //  d.attr('stroke-width',0.5)
                  //   d.drag(move, start, up);
                 }
@@ -82,7 +84,7 @@
             y += width;
         }
         console.timeEnd('Create OctoGrid');
-    
+        return cellList;
     }
 
     
